@@ -2,13 +2,15 @@
 {
     public static void Main(string[] args)
     {
+        Console.Write("");
         int q = Convert.ToInt32(Console.ReadLine().Trim());
 
         for (int qItr = 0; qItr < q; qItr++)
         {
-            long n = Convert.ToInt64(Console.ReadLine().Trim());
+            Console.Write("");
+            uint n = Convert.ToUInt32(Console.ReadLine().Trim());
 
-            long result = FlippingB(n);
+            uint result = Flipping(n);
 
             Console.WriteLine(result);
         }
@@ -16,9 +18,10 @@
         Console.ReadKey();
     }
 
-    public static long FlippingB(long n)
+    public static uint Flipping(uint n)
     {
-        //work in progress
-        return 0;
+        uint max32BitsUint = 0xFFFFFFFF;
+
+        return n ^ max32BitsUint;
     }
 }
